@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
-        <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.css">
+<!--        <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.css">-->
         <title>Weather Map Project</title>
     </head>
     <body>
@@ -12,13 +12,18 @@
         <div id="forecast-container">
 
         </div>
-        <div id="map">
+        <div id="map" style="width: 1200px; height: 900px">
 
         </div>
 
         <script src="libraries/jquery-2.2.4.js"></script>
-        <script src="libraries/bootstrap/js/bootstrap.js"></script>
+<!--        <script src="libraries/bootstrap/js/bootstrap.js"></script>-->
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+        <script src="js/apis/keys.js"></script>
+        <script src="js/mapbox-utils.js"></script>
+        <script src="js/weathermap-utils.js"></script>
+        <script src="js/dom-weather-loader.js"></script>
+
     </body>
 </html>
