@@ -16,7 +16,8 @@ addMapEvent(marker)
 let geocoder = setGeoCoder();
 addGeocoder(geocoder);
 addGeocoderEvent(geocoder);
-getCoordinates(marker);
+getCoordinatesDrag(marker);
+// getCoordinatesSearch(marker);
 
 function setMarker(point) {
     return new mapboxgl.Marker().setLngLat(point)
@@ -44,14 +45,21 @@ function setGeoCoder(){
 
 function addGeocoderEvent() {
     geocoder.on("result", function (event){
-        marker.setLngLat(event.result.geometry.coordinates)
-
+       var coord = marker.setLngLat(event.result.geometry.coordinates)
+        getForecast(coord);
     })
 }
 
-function getCoordinates () {
+function getCoordinatesDrag () {
     marker.on("dragend", function (event) {
         var lngLat = event.target.getLngLat()
         getForecast(lngLat);
     })
 }
+
+// function getCoordinatesSearch () {
+//     marker.on("result", function (event) {
+//         var lngLat = event.target.getLngLat()
+//         getForecast(lngLat);
+//     })
+// }
