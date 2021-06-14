@@ -22,8 +22,7 @@ let getForecast = function (coordinates) {
 }
 
 
-
-function filterDataOne (data) {
+function filterDataOne(data) {
     let dataObject = {
         date: data.list[0].dt_txt,
         temp: data.list[0].main.temp,
@@ -37,7 +36,7 @@ function filterDataOne (data) {
     return dataObject
 }
 
-function filterDataTwo (data) {
+function filterDataTwo(data) {
     let dataObject = {
         date: data.list[8].dt_txt,
         temp: data.list[8].main.temp,
@@ -51,7 +50,7 @@ function filterDataTwo (data) {
     return dataObject
 }
 
-function filterDataThree (data) {
+function filterDataThree(data) {
     let dataObject = {
         date: data.list[16].dt_txt,
         temp: data.list[16].main.temp,
@@ -65,7 +64,7 @@ function filterDataThree (data) {
     return dataObject
 }
 
-function filterDataFour (data) {
+function filterDataFour(data) {
     let dataObject = {
         date: data.list[24].dt_txt,
         temp: data.list[24].main.temp,
@@ -79,7 +78,7 @@ function filterDataFour (data) {
     return dataObject
 }
 
-function filterDataFive (data) {
+function filterDataFive(data) {
     let dataObject = {
         date: data.list[32].dt_txt,
         temp: data.list[32].main.temp,

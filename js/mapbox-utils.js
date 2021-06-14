@@ -17,6 +17,7 @@ let geocoder = setGeoCoder();
 addGeocoder(geocoder);
 addGeocoderEvent(geocoder);
 getCoordinatesDrag(marker);
+
 // getCoordinatesLoad(marker);
 
 function setMarker(point) {
@@ -27,7 +28,7 @@ function setMarker(point) {
 
 function addMapEvent(marker) {
     map.on('click', function (event) {
-       marker.setLngLat(event.lngLat).addTo(map)
+        marker.setLngLat(event.lngLat).addTo(map)
         console.log("addMapEvent")
         var lngLat = marker.getLngLat()
         console.log(lngLat)
@@ -35,11 +36,11 @@ function addMapEvent(marker) {
     })
 }
 
-function addGeocoder (geocoder) {
+function addGeocoder(geocoder) {
     map.addControl(geocoder);
 }
 
-function setGeoCoder(){
+function setGeoCoder() {
     return new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl,
@@ -48,18 +49,18 @@ function setGeoCoder(){
 }
 
 function addGeocoderEvent() {
-    geocoder.on("result", function (event){
-       marker.setLngLat(event.result.geometry.coordinates)
+    geocoder.on("result", function (event) {
+        marker.setLngLat(event.result.geometry.coordinates)
         var coord = marker.getLngLat()
         console.log("dallas?")
         getForecast(coord);
     })
 }
 
-function getCoordinatesDrag () {
+function getCoordinatesDrag() {
     marker.on("dragend", function (event) {
-    // $("#forecast-container").html("");
-    // console.log("clear html")
+        // $("#forecast-container").html("");
+        // console.log("clear html")
         var lngLat = event.target.getLngLat()
         getForecast(lngLat);
     })
