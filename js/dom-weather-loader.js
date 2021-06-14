@@ -3,7 +3,7 @@ function createDayOne (filtered) {
                                     <br>current Temp: ${filtered.temp}
                                     <br> humidity: ${filtered.humidity}
                                     <br> Wind: ${filtered.wind}
-                                    <br> Pressure: ${filtered.pressure}<br>`)
+                                    <br> Pressure: ${filtered.pressure}<br><br>`)
 }
 
 function createDayTwo (filtered) {
@@ -11,7 +11,7 @@ function createDayTwo (filtered) {
                                     <br>current Temp: ${filtered.temp}
                                     <br> humidity: ${filtered.humidity}
                                     <br> Wind: ${filtered.wind}
-                                    <br> Pressure: ${filtered.pressure}<br>`)
+                                    <br> Pressure: ${filtered.pressure}<br><br>`)
 }
 
 function createDayThree (filtered) {
@@ -19,7 +19,7 @@ function createDayThree (filtered) {
                                     <br>current Temp: ${filtered.temp}
                                     <br> humidity: ${filtered.humidity}
                                     <br> Wind: ${filtered.wind}
-                                    <br> Pressure: ${filtered.pressure}<br>`)
+                                    <br> Pressure: ${filtered.pressure}<br><br>`)
 }
 
 function createDayFour (filtered) {
@@ -27,7 +27,7 @@ function createDayFour (filtered) {
                                     <br>current Temp: ${filtered.temp}
                                     <br> humidity: ${filtered.humidity}
                                     <br> Wind: ${filtered.wind}
-                                    <br> Pressure: ${filtered.pressure}<br>`)
+                                    <br> Pressure: ${filtered.pressure}<br><br>`)
 }
 
 function createDayFive (filtered) {
@@ -35,5 +35,5 @@ function createDayFive (filtered) {
                                     <br>current Temp: ${filtered.temp}
                                     <br> humidity: ${filtered.humidity}
                                     <br> Wind: ${filtered.wind}
-                                    <br> Pressure: ${filtered.pressure}<br>`)
+                                    <br> Pressure: ${filtered.pressure}<br><br>`)
 }
