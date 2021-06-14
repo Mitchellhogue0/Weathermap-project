@@ -1,4 +1,5 @@
 let getForecast = function (coordinates) {
+    console.log("from addMapEvent")
     $.get({
         url: "https://api.openweathermap.org/data/2.5/forecast",
         data: {
@@ -15,6 +16,7 @@ let getForecast = function (coordinates) {
             createDayThree(filterDataThree(data))
             createDayFour(filterDataFour(data))
             createDayFive(filterDataFive(data))
+
         }
     })
 }

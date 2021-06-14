@@ -28,8 +28,10 @@ function setMarker(point) {
 function addMapEvent(marker) {
     map.on('click', function (event) {
        marker.setLngLat(event.lngLat).addTo(map)
-        // var lngLat = event.target.getLngLat()
-        // getForecast(lngLat);
+        console.log("addMapEvent")
+        var lngLat = marker.getLngLat()
+        console.log(lngLat)
+        getForecast(lngLat);
     })
 }
 
@@ -48,12 +50,16 @@ function setGeoCoder(){
 function addGeocoderEvent() {
     geocoder.on("result", function (event){
        marker.setLngLat(event.result.geometry.coordinates)
-       //  getForecast(coord);
+        var coord = marker.getLngLat()
+        console.log("dallas?")
+        getForecast(coord);
     })
 }
 
 function getCoordinatesDrag () {
     marker.on("dragend", function (event) {
+    // $("#forecast-container").html("");
+    // console.log("clear html")
         var lngLat = event.target.getLngLat()
         getForecast(lngLat);
     })
@@ -61,6 +67,7 @@ function getCoordinatesDrag () {
 
 // function getCoordinatesLoad () {
 //     marker.on("click", function (event) {
+//         console.log("test");
 //         var lngLat = event.target.getLngLat()
 //         getForecast(lngLat);
 //     })
