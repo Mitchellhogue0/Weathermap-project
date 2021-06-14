@@ -47,7 +47,7 @@ function setGeoCoder(){
 
 function addGeocoderEvent() {
     geocoder.on("result", function (event){
-       // var coord = marker.setLngLat(event.result.geometry.coordinates)
+       marker.setLngLat(event.result.geometry.coordinates)
        //  getForecast(coord);
     })
 }
